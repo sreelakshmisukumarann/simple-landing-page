@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    
+<!-- fontawsome cdn websites -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header style="width: 100%; height: 300px; background-image: url('https://image.freepik.com/free-vector/circuit-technology-background-with-hi-tech-digital-data-connection-system-computer-electronic-desing_29971-535.jpg'); background-position: top;">
+       <nav class="navbar bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="">
+                    <i class="fa-solid fa-bars fa-2x ms-3 mt-3"></i>
+                    <span class="ms-3 mt-3" style="font-size: 30px;">DashBoard</span>
+                </a>
+                <div>
+                    <button onclick="logout()"  type="button" class="text-light btn" style="font-size: 20px;" ><i class="fa-solid fa-circle-user"></i> Log out</button>
+                </div>
+            </div>
+       </nav>
+         
+    </header>
+    <div class="container">
+        <h1 class="text-center mt-5 text-primary">Welcome <span id="username" style="color: red;">user</span></h1>
+        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quam facere aspernatur minima officiis nostrum saepe repudiandae vitae quae nulla, dolor a rem, error pariatur totam quidem reiciendis at architecto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, reprehenderit facilis tenetur consequuntur corrupti veniam laudantium numquam a nisi pariatur repellat commodi beatae cum animi ipsam qui dignissimos quae soluta. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, atque eligendi debitis, tempore harum tenetur explicabo dolor assumenda eius sapiente ipsa praesentium corrupti delectus reiciendis perspiciatis culpa fugit provident cupiditate.</p>
+    </div>
+</body>
+<script>
+    let user = localStorage.getItem("user") //inside the parathensis user variable is inside the local storage that username is stored
+    // username.innerHTML=user
+    if(!user)
+    {
+        alert('please login')
+        //navigate
+        window.location="login.html"
+    }
+    else{
+        username.innerHTML=user
+    }
+
+    function logout(){
+
+        //remove username in the local storage
+        localStorage.removeItem("user")
+        //navigate
+        window.location="login.html"
+    }
+
+</script>
+</html>
